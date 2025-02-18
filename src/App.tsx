@@ -1,10 +1,11 @@
-import NetworkAnimation from './components/NetworkAnimation'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Overview from './components/Overview'
-import WhyChooseMe from './components/WhyChooseMe'
-import WorkExperience from './components/WorkExperience'
-import Certificates from './components/Certificates'
+import NetworkAnimation from "./components/NetworkAnimation";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Overview from "./components/Overview";
+import WhyChooseMe from "./components/WhyChooseMe";
+import WorkExperience from "./components/WorkExperience";
+import Certificates from "./components/Certificates";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
       <WhyChooseMe />
       <WorkExperience />
       <Certificates />
+      <Contact />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;

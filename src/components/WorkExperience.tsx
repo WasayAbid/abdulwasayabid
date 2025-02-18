@@ -80,7 +80,7 @@ const WorkExperience = () => {
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
-            className="text-xs sm:text-sm md:text-base text-gray-400 uppercase tracking-wider"
+            className="block text-center text-xs sm:text-sm md:text-base text-gray-400 uppercase tracking-wider mb-2"
           >
             WHAT I HAVE DONE SO FAR
           </motion.span>
@@ -89,29 +89,37 @@ const WorkExperience = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 mb-6 sm:mb-16"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 mb-6 sm:mb-16 text-center"
           >
             Experience and Projects<span className="text-gradient">.</span>
           </motion.h2>
 
           <div className="relative">
-            {/* Timeline line - visible only on larger screens */}
-            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-purple-600 to-purple-900" />
+            {/* Timeline line - visible on all screen sizes */}
+            <div className="absolute left-4 sm:left-1/2 transform sm:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-purple-600 to-purple-900" />
 
-            {/* Mobile and Desktop Layout */}
+            {/* Projects Timeline */}
             {projects.map((project, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`flex flex-col lg:flex-row items-center mb-8 sm:mb-12 lg:mb-20 ${
-                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                className={`flex flex-col sm:flex-row items-start mb-8 sm:mb-12 lg:mb-20 relative ${
+                  index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
                 }`}
               >
+                {/* Timeline dot */}
+                <div className="absolute left-4 sm:left-1/2 transform sm:-translate-x-1/2 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-[#1A1A2E] border-4 border-purple-600 flex items-center justify-center z-10">
+                  <span className="text-white text-xs sm:text-sm font-medium">
+                    {project.period}
+                  </span>
+                </div>
+
+                {/* Project Card */}
                 <div
-                  className={`w-full lg:w-1/2 ${
-                    index % 2 === 0 ? "lg:pr-16 lg:text-right" : "lg:pl-16"
+                  className={`ml-12 sm:ml-0 w-full sm:w-1/2 ${
+                    index % 2 === 0 ? "sm:pr-16 sm:text-right" : "sm:pl-16"
                   }`}
                 >
                   <motion.div
@@ -127,7 +135,7 @@ const WorkExperience = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] to-transparent opacity-80" />
                     </div>
-                    <div className="p-4 sm:p-6 lg:p-8">
+                    <div className="p-4 sm:p-6">
                       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-3 sm:mb-4 gap-2 sm:gap-4">
                         <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">
                           {project.title}
@@ -142,8 +150,8 @@ const WorkExperience = () => {
                       <div
                         className={`flex flex-wrap gap-2 ${
                           index % 2 === 0
-                            ? "lg:justify-end"
-                            : "lg:justify-start"
+                            ? "sm:justify-end"
+                            : "sm:justify-start"
                         }`}
                       >
                         {project.tags.map((tag) => (
@@ -159,14 +167,8 @@ const WorkExperience = () => {
                   </motion.div>
                 </div>
 
-                {/* Timeline dot - visible only on larger screens */}
-                <div className="hidden lg:flex w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#1A1A2E] border-4 border-purple-600 items-center justify-center relative z-10 my-4 lg:my-0">
-                  <span className="text-white text-xs sm:text-sm font-medium">
-                    {project.period}
-                  </span>
-                </div>
-
-                <div className="hidden lg:block w-1/2" />
+                {/* Empty space for timeline alignment */}
+                <div className="hidden sm:block sm:w-1/2" />
               </motion.div>
             ))}
           </div>

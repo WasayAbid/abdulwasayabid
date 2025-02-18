@@ -5,6 +5,7 @@ import Overview from "@/components/Overview";
 import WhyChooseMe from "@/components/WhyChooseMe";
 import WorkExperience from "@/components/WorkExperience";
 import Certificates from "@/components/Certificates";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WhyChooseMe />
       <WorkExperience />
       <Certificates />
+      <Contact />
     </main>
   );
 }

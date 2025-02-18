@@ -1,79 +1,119 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { FaEnvelope, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FaPhone, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-6xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Get In <span className="gradient-text">Touch</span>
-          </h2>
-          
-          <p className="text-gray-300 mb-12">
-            I'm always open to new opportunities and interesting projects.
-            Feel free to reach out if you'd like to collaborate or just say hello!
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.a
-              href="mailto:jahanzaib.tayyab@gmail.com"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col items-center p-6 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.3 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-16 text-center"
+          >
+            Get In Touch With Me<span className="text-gradient">.</span>
+          </motion.h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Info */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: 0.4 }}
+              className="space-y-8"
             >
-              <FaEnvelope className="text-3xl text-primary mb-4" />
-              <span className="text-gray-300">Email</span>
-              <span className="text-sm text-gray-400">jahanzaib.tayyab@gmail.com</span>
-            </motion.a>
-            
-            <motion.a
-              href="https://www.linkedin.com/in/jahanzaibtariq/"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex flex-col items-center p-6 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-[#1A1A2E] rounded-xl flex items-center justify-center">
+                  <FaPhone className="w-5 h-5 text-purple-500" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">Phone Number</h3>
+                  <p className="text-gray-400">+971505119576</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-[#1A1A2E] rounded-xl flex items-center justify-center">
+                  <FaEnvelope className="w-5 h-5 text-purple-500" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">Email Address</h3>
+                  <p className="text-gray-400">abdulwasayabid.801@gmail.com</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: 0.4 }}
+              className="bg-[#1A1A2E] rounded-3xl p-8"
             >
-              <FaLinkedin className="text-3xl text-primary mb-4" />
-              <span className="text-gray-300">LinkedIn</span>
-              <span className="text-sm text-gray-400">Connect with me</span>
-            </motion.a>
-            
-            <motion.a
-              href="https://twitter.com/jahanzaibtariq_"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col items-center p-6 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
-            >
-              <FaTwitter className="text-3xl text-primary mb-4" />
-              <span className="text-gray-300">Twitter</span>
-              <span className="text-sm text-gray-400">Follow me</span>
-            </motion.a>
+              <form className="space-y-6">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Full Name*"
+                    className="w-full px-4 py-3 bg-[#2A2A3E] rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Email Address*"
+                    className="w-full px-4 py-3 bg-[#2A2A3E] rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    placeholder="Phone Number*"
+                    className="w-full px-4 py-3 bg-[#2A2A3E] rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Subject*"
+                    className="w-full px-4 py-3 bg-[#2A2A3E] rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    placeholder="Tell me more about your project"
+                    rows={4}
+                    className="w-full px-4 py-3 bg-[#2A2A3E] rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl font-medium hover:opacity-90 transition-opacity"
+                >
+                  Submit
+                </button>
+              </form>
+            </motion.div>
           </div>
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
