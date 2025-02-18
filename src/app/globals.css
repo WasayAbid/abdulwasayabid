@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background: #00000D;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+.gradient-purple {
+  background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #FFFFFF 0%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title-gradient {
+  background: linear-gradient(to right, #6D28D9 0%, #4C1D95 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.connect-button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 24px;
+  border-radius: 100px;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.connect-button:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}

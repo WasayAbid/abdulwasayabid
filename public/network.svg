@@ -1,0 +1,21 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.5">
+    <circle cx="100" cy="100" r="2" fill="white"/>
+    <circle cx="400" cy="150" r="2" fill="white"/>
+    <circle cx="700" cy="200" r="2" fill="white"/>
+    <circle cx="1000" cy="150" r="2" fill="white"/>
+    <circle cx="1300" cy="100" r="2" fill="white"/>
+    <circle cx="200" cy="300" r="2" fill="white"/>
+    <circle cx="500" cy="350" r="2" fill="white"/>
+    <circle cx="800" cy="400" r="2" fill="white"/>
+    <circle cx="1100" cy="350" r="2" fill="white"/>
+    <circle cx="1400" cy="300" r="2" fill="white"/>
+    <path d="M100 100L400 150L700 200L1000 150L1300 100" stroke="white" stroke-width="0.5" stroke-opacity="0.2"/>
+    <path d="M200 300L500 350L800 400L1100 350L1400 300" stroke="white" stroke-width="0.5" stroke-opacity="0.2"/>
+    <path d="M100 100L200 300" stroke="white" stroke-width="0.5" stroke-opacity="0.2"/>
+    <path d="M400 150L500 350" stroke="white" stroke-width="0.5" stroke-opacity="0.2"/>
+    <path d="M700 200L800 400" stroke="white" stroke-width="0.5" stroke-opacity="0.2"/>
+    <path d="M1000 150L1100 350" stroke="white" stroke-width="0.5" stroke-opacity="0.2"/>
+    <path d="M1300 100L1400 300" stroke="white" stroke-width="0.5" stroke-opacity="0.2"/>
+  </g>
+</svg>
