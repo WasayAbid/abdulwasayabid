@@ -6,6 +6,7 @@ import WhyChooseMe from "@/components/WhyChooseMe";
 import WorkExperience from "@/components/WorkExperience";
 import Certificates from "@/components/Certificates";
 import Contact from "@/components/Contact";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       <Hero />
       <Overview />
       <WhyChooseMe />
+      <Skills />
+
       <WorkExperience />
       <Certificates />
       <Contact />

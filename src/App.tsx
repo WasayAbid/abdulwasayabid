@@ -6,6 +6,7 @@ import WhyChooseMe from "./components/WhyChooseMe";
 import WorkExperience from "./components/WorkExperience";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
+import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <Overview />
       <WhyChooseMe />
+      <Skills />
       <WorkExperience />
       <Certificates />
       <Contact />
