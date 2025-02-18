@@ -10,7 +10,7 @@ const projects = [
       "Machine learning internship project focused on developing and implementing advanced ML solutions.",
     tags: ["Machine Learning", "Python", "Data Science"],
     type: "Machine Learning Internship",
-    period: "2023",
+    period: "2025",
     image: "/images/codeAlphaInternship.png",
   },
   {
@@ -19,7 +19,7 @@ const projects = [
       "Innovative system that generates custom furniture designs using LLMs based on customer descriptions and preferences.",
     tags: ["Generative AI", "LLM", "Design"],
     type: "Generative AI",
-    period: "2023",
+    period: "2024",
     image: "/images/murphy-al-saham.png",
   },
   {
@@ -28,7 +28,7 @@ const projects = [
       "Fine-tuned LLM specifically trained to provide expert advice on custom furniture design and construction.",
     tags: ["LLM", "Fine-tuning", "Consulting"],
     type: "AI Agent",
-    period: "2023",
+    period: "2024",
     image: "/images/chat.png",
   },
   {
@@ -37,7 +37,7 @@ const projects = [
       "A supervised learning-based model trained on diverse career data to recommend suitable career paths based on required skills and user preferences.",
     tags: ["Supervised Learning", "Career Prediction", "Machine Learning"],
     type: "Predictive Model",
-    period: "2023",
+    period: "2024",
     image: "/images/AIc.png",
   },
   {
@@ -46,7 +46,7 @@ const projects = [
       "AI-powered nutrition assistant that provides personalized health and nutrition advice using advanced language models.",
     tags: ["LLM", "AI Agent", "Healthcare"],
     type: "AI Agent",
-    period: "2023",
+    period: "2024",
     image: "/images/nutribot.png",
   },
   {
@@ -55,7 +55,7 @@ const projects = [
       "Deep learning model trained on 20,000 MNIST images for accurate handwritten digit recognition.",
     tags: ["Computer Vision", "Deep Learning", "PyTorch"],
     type: "Machine Learning",
-    period: "2023",
+    period: "2025",
     image: "/images/mnist.png",
   },
 ];

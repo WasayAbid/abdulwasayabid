@@ -2,13 +2,26 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaPython, FaRobot, FaBrain, FaDatabase } from "react-icons/fa";
+import {
+  FaPython,
+  FaRobot,
+  FaBrain,
+  FaDatabase,
+  FaReact,
+  FaHtml5,
+} from "react-icons/fa";
 import {
   SiTensorflow,
   SiOpenai,
   SiScikitlearn,
   SiPandas,
   SiNumpy,
+  SiDjango,
+  SiFlask,
+  SiFastapi,
+  SiNextdotjs,
+  SiSupabase,
+  SiStrapi,
 } from "react-icons/si";
 import {
   BsLightningChargeFill,
@@ -16,31 +29,26 @@ import {
   BsRobot,
   BsGear,
 } from "react-icons/bs";
-import { TbMathFunction, TbChartHistogram } from "react-icons/tb";
+import { TbMathFunction, TbChartHistogram, TbApi } from "react-icons/tb";
 import { BiData } from "react-icons/bi";
 
 const skillCategories = [
   {
-    name: "Core ML & Data Science",
+    name: "Machine Learning & Deep Learning",
     skills: [
       { name: "Python", icon: FaPython, color: "#3776AB" },
-      { name: "NumPy", icon: SiNumpy, color: "#013243" },
-      { name: "Pandas", icon: SiPandas, color: "#150458" },
-      { name: "Matplotlib", icon: TbChartHistogram, color: "#11557C" },
-      { name: "SciPy", icon: BsGraphUp, color: "#8CAAE6" },
-      { name: "Scikit-Learn", icon: SiScikitlearn, color: "#F7931E" },
-      { name: "Data Manipulation", icon: BiData, color: "#60A5FA" },
-      { name: "EDA", icon: TbChartHistogram, color: "#6EE7B7" },
-    ],
-  },
-  {
-    name: "Deep Learning & Neural Networks",
-    skills: [
       { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00" },
       { name: "Deep Learning", icon: FaBrain, color: "#6366F1" },
+      { name: "Neural Networks", icon: FaBrain, color: "#F43F5E" },
       { name: "Machine Learning", icon: BsGraphUp, color: "#8B5CF6" },
       { name: "Linear Models", icon: TbMathFunction, color: "#EC4899" },
-      { name: "Neural Networks", icon: FaBrain, color: "#F43F5E" },
+      { name: "NumPy", icon: SiNumpy, color: "#013243" },
+      { name: "Pandas", icon: SiPandas, color: "#150458" },
+      { name: "Scikit-Learn", icon: SiScikitlearn, color: "#F7931E" },
+      { name: "Matplotlib", icon: TbChartHistogram, color: "#11557C" },
+      { name: "SciPy", icon: BsGraphUp, color: "#8CAAE6" },
+      { name: "Data Manipulation", icon: BiData, color: "#60A5FA" },
+      { name: "EDA", icon: TbChartHistogram, color: "#6EE7B7" },
     ],
   },
   {
@@ -52,6 +60,20 @@ const skillCategories = [
       { name: "RAG", icon: BsLightningChargeFill, color: "#F59E0B" },
       { name: "Vector Databases", icon: FaDatabase, color: "#8B5CF6" },
       { name: "LangChain", icon: BsGear, color: "#00A67E" },
+    ],
+  },
+  {
+    name: "AI-Powered Web Development",
+    skills: [
+      { name: "Django", icon: SiDjango, color: "#092E20" },
+      { name: "Flask", icon: SiFlask, color: "#000000" },
+      { name: "FastAPI", icon: SiFastapi, color: "#009688" },
+      { name: "REST API", icon: TbApi, color: "#FF5733" },
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+      { name: "React.js", icon: FaReact, color: "#61DAFB" },
+      { name: "HTML/Tailwind", icon: FaHtml5, color: "#38BDF8" },
+      { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
+      { name: "CMS (Strapi)", icon: SiStrapi, color: "#8E75FF" },
     ],
   },
 ];
