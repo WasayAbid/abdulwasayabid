@@ -1,60 +1,71 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { FaGithub, FaExternalLinkAlt, FaRobot, FaBrain } from 'react-icons/fa'
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+  FaChartLine,
+  FaExternalLinkAlt,
+  FaRobot,
+  FaBrain,
+} from "react-icons/fa";
 
 const projects = [
   {
     title: "Code Alpha",
-    description: "Machine learning internship project focused on developing and implementing advanced ML solutions.",
+    description:
+      "Machine learning internship project focused on developing and implementing advanced ML solutions.",
     icon: FaBrain,
     tags: ["Machine Learning", "Python", "Data Science"],
-    type: "Machine Learning Internship"
+    type: "Machine Learning Internship",
   },
   {
     title: "AI Furniture Designer",
-    description: "Innovative system that generates custom furniture designs using LLMs based on customer descriptions and preferences.",
+    description:
+      "Innovative system that generates custom furniture designs using LLMs based on customer descriptions and preferences.",
     icon: FaRobot,
     tags: ["Generative AI", "LLM", "Design"],
-    type: "Generative AI"
+    type: "Generative AI",
   },
   {
     title: "AI Furniture Talker",
-    description: "Fine-tuned LLM specifically trained to provide expert advice on custom furniture design and construction.",
+    description:
+      "Fine-tuned LLM specifically trained to provide expert advice on custom furniture design and construction.",
     icon: FaRobot,
     tags: ["LLM", "Fine-tuning", "Consulting"],
-    type: "AI Agent"
+    type: "AI Agent",
   },
   {
     title: "AI Career Counsellor",
-    description: "A supervised learning-based model trained on diverse career data to recommend suitable career paths based on required skills and user preferences.",
+    description:
+      "A supervised learning-based model trained on diverse career data to recommend suitable career paths based on required skills and user preferences.",
     icon: FaChartLine,
     tags: ["Supervised Learning", "Career Prediction", "Machine Learning"],
-    type: "Predictive Model"
-},
+    type: "Predictive Model",
+  },
 
-   {
+  {
     title: "Nutri Bot",
-    description: "AI-powered nutrition assistant that provides personalized health and nutrition advice using advanced language models.",
+    description:
+      "AI-powered nutrition assistant that provides personalized health and nutrition advice using advanced language models.",
     icon: FaRobot,
     tags: ["LLM", "AI Agent", "Healthcare"],
-    type: "AI Agent"
+    type: "AI Agent",
   },
   {
     title: "MNIST Digit Detector",
-    description: "Deep learning model trained on 20,000 MNIST images for accurate handwritten digit recognition.",
+    description:
+      "Deep learning model trained on 20,000 MNIST images for accurate handwritten digit recognition.",
     icon: FaBrain,
     tags: ["Computer Vision", "Deep Learning", "PyTorch"],
-    type: "Machine Learning"
-  }
-]
+    type: "Machine Learning",
+  },
+];
 
 const Projects = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   return (
     <section className="py-20 relative">
@@ -74,7 +85,7 @@ const Projects = () => {
           >
             MY WORK
           </motion.span>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -104,7 +115,9 @@ const Projects = () => {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-bold mb-3 text-white">{project.title}</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-white">
+                    {project.title}
+                  </h3>
                   <p className="text-gray-400 mb-6">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -124,7 +137,7 @@ const Projects = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

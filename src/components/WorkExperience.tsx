@@ -1,64 +1,70 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const projects = [
   {
     title: "Code Alpha",
-    description: "Machine learning internship project focused on developing and implementing advanced ML solutions.",
+    description:
+      "Machine learning internship project focused on developing and implementing advanced ML solutions.",
     tags: ["Machine Learning", "Python", "Data Science"],
     type: "Machine Learning Internship",
     period: "2023",
-    image: "/images/codeAlphaInternship.png"
+    image: "/images/codeAlphaInternship.png",
   },
   {
     title: "AI Furniture Designer",
-    description: "Innovative system that generates custom furniture designs using LLMs based on customer descriptions and preferences.",
+    description:
+      "Innovative system that generates custom furniture designs using LLMs based on customer descriptions and preferences.",
     tags: ["Generative AI", "LLM", "Design"],
     type: "Generative AI",
     period: "2023",
-    image: "/images/murphy-al-saham.png"
+    image: "/images/murphy-al-saham.png",
   },
   {
     title: "AI Furniture Personal Consultant",
-    description: "Fine-tuned LLM specifically trained to provide expert advice on custom furniture design and construction.",
+    description:
+      "Fine-tuned LLM specifically trained to provide expert advice on custom furniture design and construction.",
     tags: ["LLM", "Fine-tuning", "Consulting"],
     type: "AI Agent",
     period: "2023",
-    image: "/images/chat.png"
+    image: "/images/chat.png",
   },
   {
     title: "AI Career Counsellor",
-    description: "A supervised learning-based model trained on diverse career data to recommend suitable career paths based on required skills and user preferences.",
+    description:
+      "A supervised learning-based model trained on diverse career data to recommend suitable career paths based on required skills and user preferences.",
     tags: ["Supervised Learning", "Career Prediction", "Machine Learning"],
     type: "Predictive Model",
     period: "2023",
-    image: "/images/AIc.png"
+    image: "/images/AIc.png",
   },
   {
     title: "Nutri Bot",
-    description: "AI-powered nutrition assistant that provides personalized health and nutrition advice using advanced language models.",
+    description:
+      "AI-powered nutrition assistant that provides personalized health and nutrition advice using advanced language models.",
     tags: ["LLM", "AI Agent", "Healthcare"],
     type: "AI Agent",
     period: "2023",
-    image: "/images/nutribot.png"
+    image: "/images/nutribot.png",
   },
   {
     title: "MNIST Digit Detector",
-    description: "Deep learning model trained on 20,000 MNIST images for accurate handwritten digit recognition.",
+    description:
+      "Deep learning model trained on 20,000 MNIST images for accurate handwritten digit recognition.",
     tags: ["Computer Vision", "Deep Learning", "PyTorch"],
     type: "Machine Learning",
     period: "2023",
-    image: "/images/mnist.png"
-  }
-]
+    image: "/images/mnist.png",
+  },
+];
 
 const WorkExperience = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   return (
     <section id="experience-projects" className="py-10 sm:py-20 relative">
@@ -78,7 +84,7 @@ const WorkExperience = () => {
           >
             WHAT I HAVE DONE SO FAR
           </motion.span>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -100,18 +106,22 @@ const WorkExperience = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className={`flex flex-col lg:flex-row items-center mb-8 sm:mb-12 lg:mb-20 ${
-                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
               >
-                <div className={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-16 lg:text-right' : 'lg:pl-16'}`}>
-                  <motion.div 
+                <div
+                  className={`w-full lg:w-1/2 ${
+                    index % 2 === 0 ? "lg:pr-16 lg:text-right" : "lg:pl-16"
+                  }`}
+                >
+                  <motion.div
                     className="rounded-3xl bg-[#1A1A2E] text-white overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.2 }}
                   >
                     <div className="relative aspect-video">
-                      <img 
-                        src={project.image} 
+                      <img
+                        src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover"
                       />
@@ -119,13 +129,23 @@ const WorkExperience = () => {
                     </div>
                     <div className="p-4 sm:p-6 lg:p-8">
                       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-3 sm:mb-4 gap-2 sm:gap-4">
-                        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">{project.title}</h3>
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">
+                          {project.title}
+                        </h3>
                         <span className="px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full text-xs sm:text-sm whitespace-nowrap">
                           {project.type}
                         </span>
                       </div>
-                      <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">{project.description}</p>
-                      <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? 'lg:justify-end' : 'lg:justify-start'}`}>
+                      <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">
+                        {project.description}
+                      </p>
+                      <div
+                        className={`flex flex-wrap gap-2 ${
+                          index % 2 === 0
+                            ? "lg:justify-end"
+                            : "lg:justify-start"
+                        }`}
+                      >
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
@@ -141,7 +161,9 @@ const WorkExperience = () => {
 
                 {/* Timeline dot - visible only on larger screens */}
                 <div className="hidden lg:flex w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#1A1A2E] border-4 border-purple-600 items-center justify-center relative z-10 my-4 lg:my-0">
-                  <span className="text-white text-xs sm:text-sm font-medium">{project.period}</span>
+                  <span className="text-white text-xs sm:text-sm font-medium">
+                    {project.period}
+                  </span>
                 </div>
 
                 <div className="hidden lg:block w-1/2" />
@@ -151,7 +173,7 @@ const WorkExperience = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default WorkExperience
+export default WorkExperience;
