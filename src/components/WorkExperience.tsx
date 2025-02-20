@@ -97,7 +97,7 @@ const projects: Project[] = [
       "Text Generation",
       "Vector Databases",
     ],
-    type: "AI & Machine Learning",
+    type: "Generative AI",
     period: "2025",
     image: "/images/assign.jpeg", // Add an actual image for the project
     link: "https://github.com/orgs/PIAIC-Assignments-M-Abdul-Wasay/repositories", // Replace with actual link
