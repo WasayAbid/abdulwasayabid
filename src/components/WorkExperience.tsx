@@ -2,8 +2,20 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import Link from "next/link";
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  type: string;
+  period: string;
+  image: string;
+  link?: string; // Optional link for the project
+};
+
+const projects: Project[] = [
   {
     title: "Code Alpha",
     description:
@@ -21,6 +33,7 @@ const projects = [
     type: "Generative AI",
     period: "2024",
     image: "/images/murphy-al-saham.png",
+    link: "https://aifurnituredesigner.vercel.app", // Replace with actual link
   },
   {
     title: "AI Furniture Personal Consultant",
@@ -30,6 +43,18 @@ const projects = [
     type: "AI Agent",
     period: "2024",
     image: "/images/chat.png",
+    link: "https://aifurnituredesigner.vercel.app", // Replace with actual link
+  },
+
+  {
+    title: "Nutri Bot",
+    description:
+      "AI-powered nutrition assistant that provides personalized health and nutrition advice using advanced language models.",
+    tags: ["LLM", "AI Agent", "Healthcare"],
+    type: "AI Agent",
+    period: "2024",
+    image: "/images/nutribot.png",
+    link: "https://nutribotwasay.vercel.app", // Replace with actual link
   },
   {
     title: "AI Career Counsellor",
@@ -39,15 +64,7 @@ const projects = [
     type: "Predictive Model",
     period: "2024",
     image: "/images/AIc.png",
-  },
-  {
-    title: "Nutri Bot",
-    description:
-      "AI-powered nutrition assistant that provides personalized health and nutrition advice using advanced language models.",
-    tags: ["LLM", "AI Agent", "Healthcare"],
-    type: "AI Agent",
-    period: "2024",
-    image: "/images/nutribot.png",
+    link: "https://github.com/WasayAbid/AI-CAREER-COUNSELLOR/tree/main", // Replace with actual link
   },
   {
     title: "MNIST Digit Detector",
@@ -57,6 +74,44 @@ const projects = [
     type: "Machine Learning",
     period: "2025",
     image: "/images/mnist.png",
+    link: "https://digit-classifier-b0ok.onrender.com", // Replace with actual link
+  },
+  {
+    title: "Spotify Music Recommendation",
+    description:
+      "A machine learning-powered recommendation system that predicts the next song a user is likely to listen to based on their listening history and preferences.",
+    tags: ["Music Recommendation", "Machine Learning", "Python", "Spotify API"],
+    type: "Machine Learning",
+    period: "2025",
+    image: "/images/spotify.png", // Add an actual image for the project
+    link: "https://github.com/WasayAbid/SPOTIFY_RECOMMENDATION_SYSTEM", // Replace with actual link
+  },
+  {
+    title: "Generative AI Learning Assignments",
+    description:
+      "A collection of assignments and projects focused on learning and applying generative AI techniques. Includes integrations with Gemini API, OpenAI API, image generation, text generation, vector databases, and building intelligent agents using LangChain and CrewAI.",
+    tags: [
+      "Generative AI",
+      "AI Agents",
+      "Image Generation",
+      "Text Generation",
+      "Vector Databases",
+    ],
+    type: "AI & Machine Learning",
+    period: "2025",
+    image: "/images/assign.jpeg", // Add an actual image for the project
+    link: "https://github.com/orgs/PIAIC-Assignments-M-Abdul-Wasay/repositories", // Replace with actual link
+  },
+
+  {
+    title: "E-Commerce Website with Next.js",
+    description:
+      "A fully functional e-commerce website built using Next.js, integrating a CMS as the backend database for managing products, orders, and customer data.",
+    tags: ["E-commerce", "Next.js", "CMS", "React", "Web Development"],
+    type: "Web Development",
+    period: "2025",
+    image: "/images/thegamervault.png", // Add an actual image for the project
+    link: "https://thegamervault.vercel.app", // Replace with actual link
   },
 ];
 
@@ -164,6 +219,22 @@ const WorkExperience = () => {
                         ))}
                       </div>
                     </div>
+                    {project.link && (
+                      <div className="flex justify-center pb-4">
+                        {" "}
+                        {/* Added container for centering */}
+                        <Link
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-purple-600 hover:bg-purple-700 rounded-full" // Increased padding and font size
+                        >
+                          View Project{" "}
+                          <FaExternalLinkAlt className="ml-2 w-4 h-4" />{" "}
+                          {/* Slightly larger icon */}
+                        </Link>
+                      </div>
+                    )}
                   </motion.div>
                 </div>
 
