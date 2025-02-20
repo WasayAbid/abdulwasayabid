@@ -82,7 +82,7 @@ const Hero = () => {
               ))}
             </span>
           </h1>
-          
+
           <motion.h2
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -96,17 +96,19 @@ const Hero = () => {
           >
             an aspiring AI engineer
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.5 }}
             className="text-gray-400 text-base mb-8 px-4"
           >
-            Passionate about exploring and developing cutting-edge AI solutions, with a focus on generative AI, machine learning, and autonomous systems.
+            Passionate about exploring and developing cutting-edge AI solutions,
+            with a focus on generative AI, machine learning, and autonomous
+            systems.
           </motion.p>
-          
-          <motion.button
+
+          {/*<motion.button
             className="gradient-purple text-white px-6 py-3 rounded-full font-medium inline-flex items-center space-x-2 hover:opacity-90 transition-opacity text-sm"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -119,6 +121,7 @@ const Hero = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </motion.button>
+          */}
         </motion.div>
       </div>
 
@@ -157,7 +160,7 @@ const Hero = () => {
                 ))}
               </span>
             </h1>
-            
+
             <motion.h2
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -171,16 +174,19 @@ const Hero = () => {
             >
               an aspiring AI engineer
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.5 }}
               className="text-gray-400 text-2xl max-w-3xl mb-16"
             >
-              Passionate about exploring and developing cutting-edge AI solutions, with a focus on generative AI, machine learning, and autonomous systems. Let's push the boundaries of artificial intelligence together!
+              Passionate about exploring and developing cutting-edge AI
+              solutions, with a focus on generative AI, machine learning, and
+              autonomous systems. Let's push the boundaries of artificial
+              intelligence together!
             </motion.p>
-            
+            {/*
             <motion.button
               className="gradient-purple text-white px-10 py-4 rounded-full font-medium inline-flex items-center space-x-2 hover:opacity-90 transition-opacity text-xl"
               whileHover={{ scale: 1.05 }}
@@ -190,10 +196,21 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 1.8 }}
             >
               <span>Download CV</span>
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              <svg
+                className="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                />
               </svg>
             </motion.button>
+            */}
           </motion.div>
 
           <motion.div
@@ -226,19 +243,29 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-      
+
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
-          <svg className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          <svg
+            className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
           </svg>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Hero
