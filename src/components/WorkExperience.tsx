@@ -17,11 +17,11 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Code Alpha",
+    title: "Machine Learning Internship",
     description:
       "Machine learning internship project focused on developing and implementing advanced ML solutions.",
-    tags: ["Machine Learning", "Python", "Data Science"],
-    type: "Machine Learning Internship",
+    tags: ["Machine Learning", "Data Science"],
+    type: "Supervised Learning",
     period: "2025",
     image: "/images/codeAlphaInternship.png",
   },
@@ -29,7 +29,7 @@ const projects: Project[] = [
     title: "AI Furniture Designer",
     description:
       "Innovative system that generates custom furniture designs using LLMs based on customer descriptions and preferences.",
-    tags: ["Generative AI", "LLM", "Design"],
+    tags: ["Generative AI", "text-image", "Design"],
     type: "Generative AI",
     period: "2024",
     image: "/images/murphy-al-saham.png",
@@ -39,7 +39,7 @@ const projects: Project[] = [
     title: "AI Furniture Personal Consultant",
     description:
       "Fine-tuned LLM specifically trained to provide expert advice on custom furniture design and construction.",
-    tags: ["LLM", "Fine-tuning", "Consulting"],
+    tags: ["Generative AI", "Fine-tuning"],
     type: "AI Agent",
     period: "2024",
     image: "/images/chat.png",
@@ -50,17 +50,27 @@ const projects: Project[] = [
     title: "Nutri Bot",
     description:
       "AI-powered nutrition assistant that provides personalized health and nutrition advice using advanced language models.",
-    tags: ["LLM", "AI Agent", "Healthcare"],
+    tags: ["Generative AI", "Healthcare"],
     type: "AI Agent",
     period: "2024",
     image: "/images/nutribot.png",
     link: "https://nutribotwasay.vercel.app", // Replace with actual link
   },
   {
+    title: "AssistBot",
+    description:
+      "A Power Virtual Agent created using Microsoft Power Virtual Agents, designed to guide users through the AI Furniture Designer website.",
+    tags: ["AI Assistant", "Virtual Agent", "Website Guide"],
+    type: "AI Agent",
+    period: "2024",
+    image: "/images/teams.png",
+  },
+
+  {
     title: "AI Career Counsellor",
     description:
       "A supervised learning-based model trained on diverse career data to recommend suitable career paths based on required skills and user preferences.",
-    tags: ["Supervised Learning", "Career Prediction", "Machine Learning"],
+    tags: ["Supervised Learning", "Career Prediction"],
     type: "Predictive Model",
     period: "2024",
     image: "/images/AIc.png",
@@ -70,8 +80,8 @@ const projects: Project[] = [
     title: "MNIST Digit Detector",
     description:
       "Deep learning model trained on 20,000 MNIST images for accurate handwritten digit recognition.",
-    tags: ["Computer Vision", "Deep Learning", "PyTorch"],
-    type: "Machine Learning",
+    tags: ["Image Processing", "Deep Learning"],
+    type: "Deep Learning",
     period: "2025",
     image: "/images/mnist.png",
     link: "https://digit-classifier-b0ok.onrender.com", // Replace with actual link
@@ -80,7 +90,7 @@ const projects: Project[] = [
     title: "Spotify Music Recommendation",
     description:
       "A machine learning-powered recommendation system that predicts the next song a user is likely to listen to based on their listening history and preferences.",
-    tags: ["Music Recommendation", "Machine Learning", "Python", "Spotify API"],
+    tags: ["Machine Learning", "Spotify API"],
     type: "Machine Learning",
     period: "2025",
     image: "/images/spotify.png", // Add an actual image for the project
@@ -107,7 +117,7 @@ const projects: Project[] = [
     title: "E-Commerce Website with Next.js",
     description:
       "A fully functional e-commerce website built using Next.js, integrating a CMS as the backend database for managing products, orders, and customer data.",
-    tags: ["E-commerce", "Next.js", "CMS", "React", "Web Development"],
+    tags: ["Next.js", "CMS"],
     type: "Web Development",
     period: "2025",
     image: "/images/thegamervault.png", // Add an actual image for the project

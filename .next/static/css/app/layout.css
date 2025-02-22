@@ -958,15 +958,15 @@ video {
 .bg-purple-500\/10 {
   background-color: rgb(168 85 247 / 0.1);
 }
+.bg-purple-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 51 234 / var(--tw-bg-opacity, 1));
+}
 .bg-secondary\/50 {
   background-color: rgb(99 102 241 / 0.5);
 }
 .bg-white\/10 {
   background-color: rgb(255 255 255 / 0.1);
-}
-.bg-purple-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 51 234 / var(--tw-bg-opacity, 1));
 }
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
@@ -1075,14 +1075,14 @@ video {
 .pb-20 {
   padding-bottom: 5rem;
 }
+.pb-4 {
+  padding-bottom: 1rem;
+}
 .pt-0 {
   padding-top: 0px;
 }
 .pt-20 {
   padding-top: 5rem;
-}
-.pb-4 {
-  padding-bottom: 1rem;
 }
 .text-left {
   text-align: left;

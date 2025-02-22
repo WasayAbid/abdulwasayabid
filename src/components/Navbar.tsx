@@ -73,7 +73,7 @@ const Navbar = () => {
               onClick={() => scrollToSection("certificates")}
               className="text-sm text-gray-300 hover:text-white transition-colors"
             >
-              Certificates
+              Awards & Certifications
             </button>
             <button
               onClick={() => scrollToSection("contact")}

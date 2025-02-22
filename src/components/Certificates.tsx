@@ -8,16 +8,26 @@ import {
   FaExternalLinkAlt,
   FaBuilding,
 } from "react-icons/fa";
-import { SiCoursera, SiUdemy } from "react-icons/si";
+import { SiCoursera, SiUdemy, SiMicrosoft } from "react-icons/si";
 import { BsCloudCheck } from "react-icons/bs";
 import { useState } from "react";
 
 const certificates = [
   {
+    id: "x",
+    title: "Award for Best Performer DataScience Workshop",
+    issuer: "GlowingSoft",
+    date: "2024",
+    icon: FaBuilding,
+    image: "/images/dubai.jpg",
+    description:
+      "Recognized as the best performer in an intensive DataScience workshop.",
+  },
+  {
     id: "FJ4MD0DVQFH0",
-    title: "Deep Learning Specialization",
+    title: "Deep Learning and Reinforcment Learning Specialization",
     issuer: "Coursera",
-    date: "2023",
+    date: "2024",
     icon: SiCoursera,
     image: "/images/DL.png",
     description:
@@ -26,24 +36,27 @@ const certificates = [
       "https://www.coursera.org/account/accomplishments/verify/FJ4MD0DVQFH0",
   },
   {
-    id: "x",
-    title: "Award for Best Performer DataScience Workshop",
-    issuer: "GlowingSoft",
-    date: "2023",
-    icon: FaBuilding,
-    image: "/images/dubai.jpg",
-    description:
-      "Recognized as the best performer in an intensive DataScience workshop.",
-  },
-  {
     id: "UC-26130733-1b5b-478a-aba4-6b5e4ec470f3",
     title: "Machine Learning A-Z",
     issuer: "Udemy",
-    date: "2023",
+    date: "2024",
     icon: SiUdemy,
     image: "/images/Udemy_certificate.png",
     description:
       "Comprehensive course covering all aspects of machine learning.",
+  },
+  {
+    id: "MICROSOFT_CERT_ID",
+    title: "Power Bi and Power Virtual Agents",
+    issuer: "Microsoft",
+    date: "2025",
+    icon: SiMicrosoft,
+    image: "/images/powerbi.png",
+    description:
+      "Learned Power BI fundamentals like dashboards, visualization, and data transformation. Built and deployed Microsoft Virtual Agents across multiple platforms.",
+
+    verifyLink:
+      "https://www.coursera.org/account/accomplishments/verify/30JCXQMN1I7J",
   },
   {
     id: "6E89B4C7A2F1",
@@ -59,7 +72,7 @@ const certificates = [
     id: "PIAIC-AI-58924",
     title: "Certified Cloud Applied Generative AI Engineer",
     issuer: "PIAIC",
-    date: "2023",
+    date: "Ongoing",
     icon: BsCloudCheck,
     image: "/images/piaic.png",
     description:

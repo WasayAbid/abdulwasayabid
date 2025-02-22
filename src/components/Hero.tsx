@@ -181,10 +181,9 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 1.5 }}
               className="text-gray-400 text-2xl max-w-3xl mb-16"
             >
-              Passionate about exploring and developing cutting-edge AI
-              solutions, with a focus on generative AI, machine learning, and
-              autonomous systems. Let's push the boundaries of artificial
-              intelligence together!
+                Passionate about exploring and developing cutting-edge AI solutions,
+            with a focus on generative AI, machine learning, and autonomous
+            systems.
             </motion.p>
             {/*
             <motion.button
