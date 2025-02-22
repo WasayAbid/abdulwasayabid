@@ -22,7 +22,7 @@ const projects: Project[] = [
       "Machine learning internship project focused on developing and implementing advanced ML solutions.",
     tags: ["Machine Learning", "Data Science"],
     type: "Supervised Learning",
-    period: "2025",
+    period: " 2024- 2025",
     image: "/images/codeAlphaInternship.png",
   },
   {
@@ -41,7 +41,7 @@ const projects: Project[] = [
       "Fine-tuned LLM specifically trained to provide expert advice on custom furniture design and construction.",
     tags: ["Generative AI", "Fine-tuning"],
     type: "AI Agent",
-    period: "2024",
+    period: "2025",
     image: "/images/chat.png",
     link: "https://aifurnituredesigner.vercel.app", // Replace with actual link
   },
@@ -62,7 +62,7 @@ const projects: Project[] = [
       "A Power Virtual Agent created using Microsoft Power Virtual Agents, designed to guide users through the AI Furniture Designer website.",
     tags: ["AI Assistant", "Virtual Agent", "Website Guide"],
     type: "AI Agent",
-    period: "2024",
+    period: "2025",
     image: "/images/teams.png",
   },
 
@@ -72,7 +72,7 @@ const projects: Project[] = [
       "A supervised learning-based model trained on diverse career data to recommend suitable career paths based on required skills and user preferences.",
     tags: ["Supervised Learning", "Career Prediction"],
     type: "Predictive Model",
-    period: "2024",
+    period: "2023",
     image: "/images/AIc.png",
     link: "https://github.com/WasayAbid/AI-CAREER-COUNSELLOR/tree/main", // Replace with actual link
   },
@@ -92,7 +92,7 @@ const projects: Project[] = [
       "A machine learning-powered recommendation system that predicts the next song a user is likely to listen to based on their listening history and preferences.",
     tags: ["Machine Learning", "Spotify API"],
     type: "Machine Learning",
-    period: "2025",
+    period: "2024",
     image: "/images/spotify.png", // Add an actual image for the project
     link: "https://github.com/WasayAbid/SPOTIFY_RECOMMENDATION_SYSTEM", // Replace with actual link
   },
@@ -108,7 +108,7 @@ const projects: Project[] = [
       "Vector Databases",
     ],
     type: "Generative AI ",
-    period: "2025",
+    period: "2024-2025",
     image: "/images/assign.jpeg", // Add an actual image for the project
     link: "https://github.com/orgs/PIAIC-Assignments-M-Abdul-Wasay/repositories", // Replace with actual link
   },
@@ -119,7 +119,7 @@ const projects: Project[] = [
       "A fully functional e-commerce website built using Next.js, integrating a CMS as the backend database for managing products, orders, and customer data.",
     tags: ["Next.js", "CMS"],
     type: "Web Development",
-    period: "2025",
+    period: "2023",
     image: "/images/thegamervault.png", // Add an actual image for the project
     link: "https://thegamervault.vercel.app", // Replace with actual link
   },
@@ -175,7 +175,7 @@ const WorkExperience = () => {
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-4 sm:left-1/2 transform sm:-translate-x-1/2 w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-[#1A1A2E] border-4 border-purple-600 flex items-center justify-center z-10">
+                <div className="absolute left-4 sm:left-1/2 transform sm:-translate-x-1/2 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-[#1A1A2E] border-4 border-purple-600 flex items-center justify-center z-10">
                   <span className="text-white text-xs sm:text-sm font-medium">
                     {project.period}
                   </span>

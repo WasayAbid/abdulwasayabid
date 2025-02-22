@@ -1409,6 +1409,10 @@ body {
     height: 2rem;
   }
 
+  .sm\:h-14 {
+    height: 3.5rem;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
   }
@@ -1427,6 +1431,10 @@ body {
 
   .sm\:w-8 {
     width: 2rem;
+  }
+
+  .sm\:w-14 {
+    width: 3.5rem;
   }
 
   .sm\:-translate-x-1\/2 {
