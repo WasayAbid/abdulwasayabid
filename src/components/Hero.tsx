@@ -50,7 +50,7 @@ const Hero = () => {
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-purple-600/20">
                 <img
                   src="/images/profile.jpg"
-                  alt="Abdul Wasay"
+                  alt="Abdul Wasay "
                   className="w-full h-full object-cover"
                 />
               </div>
